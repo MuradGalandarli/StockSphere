@@ -1,4 +1,8 @@
 
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using StockSphere.Persistence.Context;
+
 namespace StockSphere.Api
 {
     public class Program
@@ -6,6 +10,13 @@ namespace StockSphere.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddIdentityApiEndpoints<IdentityUser>(options =>
+                options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             // Add services to the container.
 
