@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StockSphere.Persistence.Context;
+using StockSphere.Infrastructure;
 
 namespace StockSphere.Api
 {
@@ -10,6 +11,8 @@ namespace StockSphere.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.InfrastructureRegistrationAdd(builder.Configuration);
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

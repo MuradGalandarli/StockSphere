@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\GitHub test\\StockSphere\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1D6455-5DA9-473B-A578-9E92D19C4A11}|Infrastructure\\StockSphere.Infrastructure\\StockSphere.Infrastructure.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.infrastructure\\infrastructureregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1D6455-5DA9-473B-A578-9E92D19C4A11}|Infrastructure\\StockSphere.Infrastructure\\StockSphere.Infrastructure.csproj|solutionrelative:infrastructure\\stocksphere.infrastructure\\infrastructureregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|d:\\github test\\stocksphere\\presentation\\stocksphere.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|d:\\github test\\stocksphere\\presentation\\stocksphere.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +31,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Presentation\\StockSphere.Api\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T09:48:06.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Program.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Program.cs",
+              "RelativeToolTip": "Presentation\\StockSphere.Api\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T09:17:19.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InfrastructureRegistration.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Infrastructure\\InfrastructureRegistration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Infrastructure\\InfrastructureRegistration.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Infrastructure\\InfrastructureRegistration.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Infrastructure\\InfrastructureRegistration.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAawBsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T09:16:34.433Z",
+              "EditorCaption": ""
             }
           ]
         }
