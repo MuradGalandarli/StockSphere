@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StockSphere.Persistence.Context;
 using StockSphere.Infrastructure;
+using StockSphere.Api.Extensions;
+using StockSphere.Api.Extensions;
 
 namespace StockSphere.Api
 {
@@ -37,6 +39,7 @@ namespace StockSphere.Api
                 app.UseSwaggerUI();
             }
 
+            app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
