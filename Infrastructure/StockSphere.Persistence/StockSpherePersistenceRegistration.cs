@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using StockSphere.Application.Abstractions.Services;
+using StockSphere.Application.Repositories;
+using StockSphere.Persistence.Context;
+using StockSphere.Persistence.Repositories;
 using StockSphere.Persistence.Services;
 using System;
 using System.Collections.Generic;
@@ -14,6 +17,7 @@ namespace StockSphere.Persistence
         public static void StockSpherePersistenceRegistrationAdd(this IServiceCollection services)
         {
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<ApplicationDbContext>();
         }
     }
 }
