@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StockSphere.Domain.Entities
 {
-    internal class Warehouse
+    public class Warehouse:BaseEntity
     {
-        
-            public int Id { get; set; }
-            public string? Name { get; set; }
-        
+        public string Name { get; set; } = null!;
+        public string? Location { get; set; }
+        public bool IsActive { get; set; } = true;
+        public ICollection<Stock> Stocks { get; set; }
     }
 }
