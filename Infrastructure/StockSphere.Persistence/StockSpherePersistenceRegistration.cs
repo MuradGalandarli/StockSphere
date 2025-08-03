@@ -18,6 +18,9 @@ namespace StockSphere.Persistence
         {
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ApplicationDbContext>();
+            services.AddScoped<IWarehouseService, WarehouseService>();
+            services.AddScoped<IWarehouseWriteRepository, WarehouseWriteRepository>();
+
         }
     }
 }
