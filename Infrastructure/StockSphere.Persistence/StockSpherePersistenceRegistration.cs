@@ -20,6 +20,7 @@ namespace StockSphere.Persistence
             services.AddScoped<ApplicationDbContext>();
             services.AddScoped<IWarehouseService, WarehouseService>();
             services.AddScoped<IWarehouseWriteRepository, WarehouseWriteRepository>();
+            services.AddScoped<IWarehouseReadRepository, WarehouseReadRepository>();
 
         }
     }

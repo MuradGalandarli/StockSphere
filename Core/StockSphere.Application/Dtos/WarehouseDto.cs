@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace StockSphere.Application.Dtos
 {
-    internal class WarehouseDto
+    public class WarehouseDto
     {
+        public string Name { get; set; } = null!;
+        public string? Location { get; set; }
     }
 }

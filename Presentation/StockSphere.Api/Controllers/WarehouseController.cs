@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Warehouse.AddWarehouse;
+using StockSphere.Application.Feature.Query.Warehouse.GetAllWarehouse;
 
 namespace StockSphere.Api.Controllers
 {
@@ -21,6 +22,12 @@ namespace StockSphere.Api.Controllers
         {
             WarehouseAddCommandResponse warehouseAddCommandResponse = await _mediator.Send(warehouseAddCommandRequest);
        return Ok(warehouseAddCommandResponse);
+        }
+        [HttpGet("get-all-warehouse")]
+        public async Task<IActionResult>GetAllWarehouse([FromQuery]GetAllWarehouseQueryRequest getAllWarehouseQueryRequest)
+        {
+          List<GetAllWarehouseQueryResponse> getAllWarehouseQueryResponse = await _mediator.Send(getAllWarehouseQueryRequest);
+          return Ok(getAllWarehouseQueryResponse);  
         }
 
 

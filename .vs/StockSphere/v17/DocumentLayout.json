@@ -7,16 +7,28 @@
       "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\controllers\\warehousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\stockspherepersistenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\stockspherepersistenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\query\\warehouse\\getallwarehouse\\getallwarehousequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\query\\warehouse\\getallwarehouse\\getallwarehousequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\query\\warehouse\\getallwarehouse\\getallwarehousequeryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\query\\warehouse\\getallwarehouse\\getallwarehousequeryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\abstractions\\services\\iwarehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\abstractions\\services\\iwarehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\query\\warehouse\\getallwarehouse\\getallwarehousequeryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\query\\warehouse\\getallwarehouse\\getallwarehousequeryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,26 +50,65 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IWarehouseService.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:37:56.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WarehouseService.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAlwCEAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:48:45.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetAllWarehouseQueryRequest.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryRequest.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryRequest.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T20:55:09.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "WarehouseController.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Controllers\\WarehouseController.cs",
               "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Controllers\\WarehouseController.cs",
               "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Controllers\\WarehouseController.cs",
               "RelativeToolTip": "Presentation\\StockSphere.Api\\Controllers\\WarehouseController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBsAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAlwCEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-02T11:03:45.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "StockSpherePersistenceRegistration.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
               "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
               "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBYAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-02T11:02:25.131Z",
               "EditorCaption": ""
@@ -65,27 +116,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "WarehouseService.cs",
-              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
-              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
-              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAhwBgAAAALAAAAAAAAAA==",
+              "Title": "GetAllWarehouseQueryHandler.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryHandler.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryHandler.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAlwBUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:48:45.933Z",
+              "WhenOpened": "2025-08-03T20:51:59.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IWarehouseService.cs",
-              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
-              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
-              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
-              "RelativeToolTip": "Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "GetAllWarehouseQueryResponse.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryResponse.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryResponse.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Query\\Warehouse\\GetAllWarehouse\\GetAllWarehouseQueryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:37:56.267Z",
+              "WhenOpened": "2025-08-03T20:56:15.222Z",
               "EditorCaption": ""
             }
           ]
