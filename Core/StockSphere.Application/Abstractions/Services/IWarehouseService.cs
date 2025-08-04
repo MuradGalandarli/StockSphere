@@ -12,5 +12,6 @@ namespace StockSphere.Application.Abstractions.Services
     {
         public Task<bool> AddWarehouse(string name, string location);
         public List<WarehouseDto> GetAllWarehouse(int page,int size);
+        public Task<bool> WarehouseUpdate(Warehouse warehouse);
     }
 }

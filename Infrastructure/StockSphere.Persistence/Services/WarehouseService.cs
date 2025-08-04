@@ -39,5 +39,18 @@ namespace StockSphere.Persistence.Services
             }).ToList();
 
         }
+
+        public async Task<bool> WarehouseUpdate(Warehouse warehouse)
+        {
+           var result = await _warehouseReadRepository.GetSingleAsync(x => x.Id == warehouse.Id);
+            if (result != null)
+            {
+                result.Name = warehouse.Name;
+                result.Location = warehouse.Location;
+                await _warehouseWriteRepository.SaveAsync();
+                return true;
+            }
+            return false;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Warehouse.AddWarehouse;
+using StockSphere.Application.Feature.Command.Warehouse.WarehouseUpdate;
 using StockSphere.Application.Feature.Query.Warehouse.GetAllWarehouse;
 
 namespace StockSphere.Api.Controllers
@@ -29,7 +30,12 @@ namespace StockSphere.Api.Controllers
           List<GetAllWarehouseQueryResponse> getAllWarehouseQueryResponse = await _mediator.Send(getAllWarehouseQueryRequest);
           return Ok(getAllWarehouseQueryResponse);  
         }
-
+        [HttpPut("warehouse-update")]
+        public async Task<IActionResult> WarehouseUpdate(WarehouseUpdateCommandRequest warehouseUpdateCommandRequest)
+        {
+            WarehouseUpdateCommandResponse warehouseUpdateCommandResponse = await _mediator.Send(warehouseUpdateCommandRequest);
+            return Ok(warehouseUpdateCommandResponse);
+        }
 
     }
 }   
