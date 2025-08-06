@@ -36,8 +36,15 @@ namespace StockSphere.Persistence.Services
             {
                 Location = w.Location,
                 Name = w.Name,
+                Id = w.Id
             }).ToList();
 
+        }
+
+        public async Task<WarehouseDto> GetByIdWarehouse(int id)
+        {
+           Warehouse warehouse = await _warehouseReadRepository.GetByIdAsync(id);
+            return new WarehouseDto() {Location = warehouse.Location, Name = warehouse.Name,Id = warehouse.Id};
         }
 
         public async Task<bool> WarehouseUpdate(Warehouse warehouse)

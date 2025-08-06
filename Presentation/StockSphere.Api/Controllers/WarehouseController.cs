@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Warehouse.AddWarehouse;
 using StockSphere.Application.Feature.Command.Warehouse.WarehouseUpdate;
 using StockSphere.Application.Feature.Query.Warehouse.GetAllWarehouse;
+using StockSphere.Application.Feature.Query.Warehouse.GetByIdWarehouse;
 
 namespace StockSphere.Api.Controllers
 {
@@ -22,13 +23,13 @@ namespace StockSphere.Api.Controllers
         public async Task<IActionResult> AddWarehouse(WarehouseAddCommandRequest warehouseAddCommandRequest)
         {
             WarehouseAddCommandResponse warehouseAddCommandResponse = await _mediator.Send(warehouseAddCommandRequest);
-       return Ok(warehouseAddCommandResponse);
+            return Ok(warehouseAddCommandResponse);
         }
         [HttpGet("get-all-warehouse")]
-        public async Task<IActionResult>GetAllWarehouse([FromQuery]GetAllWarehouseQueryRequest getAllWarehouseQueryRequest)
+        public async Task<IActionResult> GetAllWarehouse([FromQuery] GetAllWarehouseQueryRequest getAllWarehouseQueryRequest)
         {
-          List<GetAllWarehouseQueryResponse> getAllWarehouseQueryResponse = await _mediator.Send(getAllWarehouseQueryRequest);
-          return Ok(getAllWarehouseQueryResponse);  
+            List<GetAllWarehouseQueryResponse> getAllWarehouseQueryResponse = await _mediator.Send(getAllWarehouseQueryRequest);
+            return Ok(getAllWarehouseQueryResponse);
         }
         [HttpPut("warehouse-update")]
         public async Task<IActionResult> WarehouseUpdate(WarehouseUpdateCommandRequest warehouseUpdateCommandRequest)
@@ -36,6 +37,12 @@ namespace StockSphere.Api.Controllers
             WarehouseUpdateCommandResponse warehouseUpdateCommandResponse = await _mediator.Send(warehouseUpdateCommandRequest);
             return Ok(warehouseUpdateCommandResponse);
         }
+        [HttpGet("get-by-id-warehouse")]
+        public async Task<IActionResult> GetAllWarehouse([FromQuery] GetByIdWarehouseQueryRequest getByIdWarehouseQuery)
+        {
+            GetByIdWarehouseQueryResponse getByIdWarehouseQueryResponse = await _mediator.Send(getByIdWarehouseQuery);
+            return Ok(getByIdWarehouseQueryResponse);
+        }
 
     }
-}   
+}

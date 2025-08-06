@@ -22,7 +22,7 @@ namespace StockSphere.Application.Feature.Query.Warehouse.GetAllWarehouse
         public async Task<List<GetAllWarehouseQueryResponse>> Handle(GetAllWarehouseQueryRequest request, CancellationToken cancellationToken)
         {
             List<WarehouseDto> warehouseDto = _warehouseService.GetAllWarehouse(request.Page, request.Size);
-            var getAllWarehouseQueryResponse = warehouseDto.Select(w => new GetAllWarehouseQueryResponse() { Location = w.Location, Name = w.Name }).ToList();
+            var getAllWarehouseQueryResponse = warehouseDto.Select(w => new GetAllWarehouseQueryResponse() { Location = w.Location, Name = w.Name,Id = w.Id}).ToList();
             return getAllWarehouseQueryResponse;
         }
     }
