@@ -14,5 +14,6 @@ namespace StockSphere.Application.Abstractions.Services
         public List<WarehouseDto> GetAllWarehouse(int page,int size);
         public Task<bool> WarehouseUpdate(Warehouse warehouse);
         public Task<WarehouseDto> GetByIdWarehouse(int id);
+        public Task<bool> RemoveWarehouse(int id);
     }
 }

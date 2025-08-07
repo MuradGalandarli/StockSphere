@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Warehouse.AddWarehouse;
+using StockSphere.Application.Feature.Command.Warehouse.RemoveWarehouse;
 using StockSphere.Application.Feature.Command.Warehouse.WarehouseUpdate;
 using StockSphere.Application.Feature.Query.Warehouse.GetAllWarehouse;
 using StockSphere.Application.Feature.Query.Warehouse.GetByIdWarehouse;
@@ -42,6 +43,12 @@ namespace StockSphere.Api.Controllers
         {
             GetByIdWarehouseQueryResponse getByIdWarehouseQueryResponse = await _mediator.Send(getByIdWarehouseQuery);
             return Ok(getByIdWarehouseQueryResponse);
+        }
+        [HttpDelete("remove-warehouse")]
+        public async Task<IActionResult> RemoveWarehouse([FromQuery]RemoveWarehouseCommandRequest removeWarehouseCommandRequest)
+        {
+            RemoveWarehouseCommandResponse removeWarehouseCommandResponse = await _mediator.Send(removeWarehouseCommandRequest);
+            return Ok(removeWarehouseCommandResponse);
         }
 
     }

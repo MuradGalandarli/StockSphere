@@ -11,7 +11,7 @@ namespace StockSphere.Application.Repositories
     {
         public Task<bool> AddAsync(T t);
         public bool UpdateAsync(T t);
-        public bool DeleteAsync(T t);
+        public bool Delete(T t);
         public Task<bool> AddRange(List<T> t);
         public Task<int> SaveAsync();
     }

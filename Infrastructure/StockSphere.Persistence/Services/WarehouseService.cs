@@ -47,6 +47,14 @@ namespace StockSphere.Persistence.Services
             return new WarehouseDto() {Location = warehouse.Location, Name = warehouse.Name,Id = warehouse.Id};
         }
 
+        public async Task<bool> RemoveWarehouse(int id)
+        {
+            Warehouse warehouse = await _warehouseReadRepository.GetByIdAsync(id);
+            bool result = _warehouseWriteRepository.Delete(warehouse);
+            await _warehouseWriteRepository.SaveAsync();
+            return result;
+        }
+
         public async Task<bool> WarehouseUpdate(Warehouse warehouse)
         {
            var result = await _warehouseReadRepository.GetSingleAsync(x => x.Id == warehouse.Id);

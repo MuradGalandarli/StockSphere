@@ -35,7 +35,7 @@ namespace StockSphere.Persistence.Repositories
             return true;
         }
 
-        public bool DeleteAsync(T t)
+        public bool Delete(T t)
         {
            EntityEntry<T> entityEntry = Table.Remove(t);
             return entityEntry.State == EntityState.Deleted;
