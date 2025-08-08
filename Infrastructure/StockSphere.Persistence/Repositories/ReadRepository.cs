@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace StockSphere.Persistence.Repositories
 {
-    public class ReadPepository<T> : IReadRepository<T> where T : BaseEntity 
+    public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity 
     {
         private readonly ApplicationDbContext _context;
-        public ReadPepository(ApplicationDbContext context)
+        public ReadRepository(ApplicationDbContext context)
         {
             _context = context;
         }

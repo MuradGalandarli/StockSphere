@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace StockSphere.Persistence.Repositories
 {
-    public class WarehouseReadRepository : ReadRepository<Warehouse>, IWarehouseReadRepository
+    public class CategoryWriteRepository : WriteRepository<Category>, ICategoryWriteRepository
     {
-        public WarehouseReadRepository(ApplicationDbContext context) : base(context)
+        public CategoryWriteRepository(ApplicationDbContext context) : base(context)
         {
         }
     }

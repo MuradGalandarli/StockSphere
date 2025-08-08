@@ -3,6 +3,58 @@
   "WorkspaceRootPath": "D:\\GitHub test\\StockSphere\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|d:\\github test\\stocksphere\\presentation\\stocksphere.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\stockspherepersistenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\stockspherepersistenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\command\\category\\addcategory\\addcategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\command\\category\\addcategory\\addcategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\command\\category\\addcategory\\addcategorycommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\command\\category\\addcategory\\addcategorycommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\abstractions\\services\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\abstractions\\services\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\repositories\\category\\categorywriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\repositories\\category\\categorywriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\repositories\\category\\categoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\repositories\\category\\categoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\repositories\\category\\icategorywriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\repositories\\category\\icategorywriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\repositories\\category\\icategoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\repositories\\category\\icategoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\repositories\\warehouse\\warehousewriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\repositories\\warehouse\\warehousewriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\abstractions\\services\\iwarehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +94,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Controllers\\CategoryController.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Presentation\\StockSphere.Api\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAlwBIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:48:28.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddCategoryCommandRequest.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandRequest.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandRequest.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:43:09.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddCategoryCommandHandler.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandHandler.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandHandler.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Command\\Category\\AddCategory\\AddCategoryCommandHandler.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:41:36.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Abstractions\\Services\\ICategoryService.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\ICategoryService.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Abstractions\\Services\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:35:55.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs*",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:35:18.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StockSpherePersistenceRegistration.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\StockSpherePersistenceRegistration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:46:13.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WarehouseService.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAawDUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T08:08:42.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Dtos\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Dtos\\CategoryDto.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Dtos\\CategoryDto.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Dtos\\CategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:37:35.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryWriteRepository.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:33:31.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReadRepository.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\ReadRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Repositories\\ReadRepository.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\ReadRepository.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Repositories\\ReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:31:42.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategoryReadRepository.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryReadRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryReadRepository.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryReadRepository.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Repositories\\Category\\CategoryReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:30:51.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICategoryWriteRepository.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Repositories\\Category\\ICategoryWriteRepository.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Repositories\\Category\\ICategoryWriteRepository.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Repositories\\Category\\ICategoryWriteRepository.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Repositories\\Category\\ICategoryWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:29:02.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ICategoryReadRepository.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T09:27:59.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "WriteRepository.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\WriteRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Repositories\\WriteRepository.cs",
@@ -58,12 +283,11 @@
               "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Repositories\\WriteRepository.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAWwA0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:28:51.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:28:51.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
               "Title": "WarehouseWriteRepository.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Repositories\\Warehouse\\WarehouseWriteRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Repositories\\Warehouse\\WarehouseWriteRepository.cs",
@@ -75,16 +299,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
               "Title": "WarehouseController.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Controllers\\WarehouseController.cs",
               "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Controllers\\WarehouseController.cs",
@@ -92,12 +308,11 @@
               "RelativeToolTip": "Presentation\\StockSphere.Api\\Controllers\\WarehouseController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAA5wC8AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:22:46.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:22:46.725Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "RemoveWarehouseCommandHandler.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandHandler.cs",
@@ -105,12 +320,11 @@
               "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandHandler.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAhwBUAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:14:34.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:14:34.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "IWriteRepository.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Repositories\\IWriteRepository.cs",
               "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Repositories\\IWriteRepository.cs",
@@ -118,12 +332,11 @@
               "RelativeToolTip": "Core\\StockSphere.Application\\Repositories\\IWriteRepository.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAvwAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:10:47.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:10:47.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "IWarehouseService.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
               "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
@@ -131,25 +344,11 @@
               "RelativeToolTip": "Core\\StockSphere.Application\\Abstractions\\Services\\IWarehouseService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAvwBAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:07:21.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:07:21.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WarehouseService.cs",
-              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
-              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs*",
-              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs*",
-              "ViewState": "AgIAACsAAAAAAAAAAIA3wDUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:08:42.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 20,
               "Title": "RemoveWarehouseCommandRequest.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandRequest.cs",
               "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandRequest.cs",
@@ -157,12 +356,11 @@
               "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:15:41.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:15:41.067Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
               "Title": "RemoveWarehouseCommandResponse.cs",
               "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandResponse.cs",
               "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandResponse.cs",
@@ -170,8 +368,7 @@
               "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\RemoveWarehouse\\RemoveWarehouseCommandResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:16:24.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:16:24.533Z"
             }
           ]
         }

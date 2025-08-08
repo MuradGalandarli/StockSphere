@@ -21,6 +21,9 @@ namespace StockSphere.Persistence
             services.AddScoped<IWarehouseService, WarehouseService>();
             services.AddScoped<IWarehouseWriteRepository, WarehouseWriteRepository>();
             services.AddScoped<IWarehouseReadRepository, WarehouseReadRepository>();
+            services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
+            services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
         }
     }
