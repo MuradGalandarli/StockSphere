@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Category.AddCategory;
+using StockSphere.Application.Feature.Command.Category.UpdateCategory;
 
 namespace StockSphere.Api.Controllers
 {
@@ -22,5 +23,12 @@ namespace StockSphere.Api.Controllers
             AddCategoryCommandResponse addCategoryCommandResponse = await _mediator.Send(addCategoryCommandRequest);
             return Ok(addCategoryCommandResponse);
         }
+        [HttpPut("update-category")]
+        public async Task<IActionResult> UpdateCategory(UpdateCategoryCommandRequest updateCategoryCommandRequest)
+        {
+            UpdateCategoryCommandResponse updateCategoryCommandResponse = await _mediator.Send(updateCategoryCommandRequest);
+            return Ok(updateCategoryCommandResponse);
+        }
+
     }
 }

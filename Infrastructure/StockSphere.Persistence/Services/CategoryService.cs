@@ -1,11 +1,6 @@
 ﻿using StockSphere.Application.Abstractions.Services;
 using StockSphere.Application.Dtos;
 using StockSphere.Application.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StockSphere.Persistence.Services
 {
@@ -22,6 +17,13 @@ namespace StockSphere.Persistence.Services
         {
            bool status = await _categoryWriteRepository.AddAsync(new() { Description =category.Description, Name = category.Name});
            await _categoryWriteRepository.SaveAsync();
+            return status;
+        }
+
+        public async Task<bool> UpdateCategory(CategoryDto category)
+        {
+          bool status = _categoryWriteRepository.Update(new() { Id = category.Id, Description = category.Description, Name = category.Name });
+            await _categoryWriteRepository.SaveAsync();
             return status;
         }
     }

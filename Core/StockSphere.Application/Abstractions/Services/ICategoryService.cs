@@ -10,5 +10,6 @@ namespace StockSphere.Application.Abstractions.Services
     public interface ICategoryService
     {
         public Task<bool> AddCategory(CategoryDto category);
+        public Task<bool> UpdateCategory(CategoryDto category);
     }
 }

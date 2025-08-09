@@ -46,7 +46,7 @@ namespace StockSphere.Persistence.Repositories
           return await _context.SaveChangesAsync();
         }
 
-        public bool UpdateAsync(T t)
+        public bool Update(T t)
         {
            EntityEntry<T> entity = Table.Update(t);
            return entity.State == EntityState.Modified;
