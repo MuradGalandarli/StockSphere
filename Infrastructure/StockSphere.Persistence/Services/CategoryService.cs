@@ -1,6 +1,9 @@
-﻿using StockSphere.Application.Abstractions.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.Json;
+using StockSphere.Application.Abstractions.Services;
 using StockSphere.Application.Dtos;
 using StockSphere.Application.Repositories;
+using StockSphere.Domain.Entities;
 
 namespace StockSphere.Persistence.Services
 {
@@ -18,6 +21,18 @@ namespace StockSphere.Persistence.Services
            bool status = await _unitOfWork.CategoryWriteRepository.AddAsync(new() { Description =category.Description, Name = category.Name});
            await _unitOfWork.CommitAsync();
             return status;
+        }
+
+        public List<CategoryDto> GetAllCategory(int page,int size)
+        {
+            var categories = _unitOfWork.CategoryReadRepository.GetAll().Skip((page-1)*size).Take(size);
+            return categories.Select(c => new CategoryDto()
+            {
+                Name = c.Name,
+                Description = c.Description,
+                Id = c.Id
+            }).ToList();
+            
         }
 
         public async Task<bool> UpdateCategory(CategoryDto category)
