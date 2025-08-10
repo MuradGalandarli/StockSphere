@@ -6,24 +6,24 @@ namespace StockSphere.Persistence.Services
 {
     public class CategoryService : ICategoryService
     {
-        private readonly ICategoryWriteRepository _categoryWriteRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryService(ICategoryWriteRepository categoryWriteRepository)
+        public CategoryService(IUnitOfWork unitOfWork)
         {
-            _categoryWriteRepository = categoryWriteRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<bool> AddCategory(CategoryDto category)
         {
-           bool status = await _categoryWriteRepository.AddAsync(new() { Description =category.Description, Name = category.Name});
-           await _categoryWriteRepository.SaveAsync();
+           bool status = await _unitOfWork.CategoryWriteRepository.AddAsync(new() { Description =category.Description, Name = category.Name});
+           await _unitOfWork.CommitAsync();
             return status;
         }
 
         public async Task<bool> UpdateCategory(CategoryDto category)
         {
-          bool status = _categoryWriteRepository.Update(new() { Id = category.Id, Description = category.Description, Name = category.Name });
-            await _categoryWriteRepository.SaveAsync();
+          bool status = _unitOfWork.CategoryWriteRepository.Update(new() { Id = category.Id, Description = category.Description, Name = category.Name });
+            await _unitOfWork.CategoryWriteRepository.SaveAsync();
             return status;
         }
     }
