@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Category.AddCategory;
 using StockSphere.Application.Feature.Command.Category.UpdateCategory;
 using StockSphere.Application.Feature.Query.Category.GetAllCategory;
+using StockSphere.Application.Feature.Query.GetByIdCategory;
 
 namespace StockSphere.Api.Controllers
 {
@@ -36,6 +37,11 @@ namespace StockSphere.Api.Controllers
             List<GetAllCategoryCommandResponse> getAllCategoryCommandResponse = await _mediator.Send(getAllCategoryCommandRequest);
             return Ok(getAllCategoryCommandResponse);
         }
-
+        [HttpGet("get-by-id-category")]
+        public async Task<IActionResult> GetByIdCategory([FromQuery]GetByIdCategoryQueryRequest getByIdCategoryQueryRequest)
+        {
+            GetByIdCategoryQueryResponse getByIdCategoryQueryResponse = await _mediator.Send(getByIdCategoryQueryRequest);
+            return Ok(getByIdCategoryQueryResponse);
+        }
     }
 }

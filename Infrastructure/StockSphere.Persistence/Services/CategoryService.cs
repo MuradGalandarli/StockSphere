@@ -35,6 +35,17 @@ namespace StockSphere.Persistence.Services
             
         }
 
+        public async Task<CategoryDto> GetByIdCategory(int id)
+        {
+           Category category = await _unitOfWork.CategoryReadRepository.GetByIdAsync(id);
+            return new()
+            {
+                Id = category.Id,
+                Name = category.Name,
+                Description = category.Description,
+            };
+        }
+
         public async Task<bool> UpdateCategory(CategoryDto category)
         {
           bool status = _unitOfWork.CategoryWriteRepository.Update(new() { Id = category.Id, Description = category.Description, Name = category.Name });
