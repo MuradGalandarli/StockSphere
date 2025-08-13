@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Category.AddCategory;
+using StockSphere.Application.Feature.Command.Category.CategoryDelete;
 using StockSphere.Application.Feature.Command.Category.UpdateCategory;
 using StockSphere.Application.Feature.Query.Category.GetAllCategory;
 using StockSphere.Application.Feature.Query.GetByIdCategory;
@@ -43,5 +44,12 @@ namespace StockSphere.Api.Controllers
             GetByIdCategoryQueryResponse getByIdCategoryQueryResponse = await _mediator.Send(getByIdCategoryQueryRequest);
             return Ok(getByIdCategoryQueryResponse);
         }
+        [HttpDelete("category-delete")]
+        public async Task<IActionResult> CategoryDelete([FromQuery]CategoryDeleteCommandRequest categoryDeleteCommandRequest)
+        {
+            CategoryDeleteCommandResponse categoryDeleteCommandResponse = await _mediator.Send(categoryDeleteCommandRequest);
+            return Ok(categoryDeleteCommandResponse);
+        }
+
     }
 }

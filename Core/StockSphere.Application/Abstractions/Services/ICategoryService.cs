@@ -13,5 +13,6 @@ namespace StockSphere.Application.Abstractions.Services
         public Task<bool> UpdateCategory(CategoryDto category);
         public List<CategoryDto> GetAllCategory(int page,int size);
         public Task<CategoryDto> GetByIdCategory(int id);
+        public Task<bool> CategoryDelete(int id);
     }
 }

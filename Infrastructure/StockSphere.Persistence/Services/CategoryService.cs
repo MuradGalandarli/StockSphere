@@ -23,6 +23,14 @@ namespace StockSphere.Persistence.Services
             return status;
         }
 
+        public async Task<bool> CategoryDelete(int id)
+        {
+           Category category = await _unitOfWork.CategoryReadRepository.GetByIdAsync(id);
+            bool status = _unitOfWork.CategoryWriteRepository.Delete(category);
+            await _unitOfWork.CommitAsync();
+            return status;
+        }
+
         public List<CategoryDto> GetAllCategory(int page,int size)
         {
             var categories = _unitOfWork.CategoryReadRepository.GetAll().Skip((page-1)*size).Take(size);
@@ -38,12 +46,17 @@ namespace StockSphere.Persistence.Services
         public async Task<CategoryDto> GetByIdCategory(int id)
         {
            Category category = await _unitOfWork.CategoryReadRepository.GetByIdAsync(id);
-            return new()
+            if (category != null)
             {
-                Id = category.Id,
-                Name = category.Name,
-                Description = category.Description,
-            };
+                return new()
+                {
+                    Id = category.Id,
+                    Name = category.Name,
+                    Description = category.Description,
+                };
+            }
+            return new();
+
         }
 
         public async Task<bool> UpdateCategory(CategoryDto category)
