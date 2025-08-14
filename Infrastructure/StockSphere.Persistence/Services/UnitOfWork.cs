@@ -19,16 +19,25 @@ namespace StockSphere.Persistence.Services
         public IWarehouseReadRepository WarehouseReadRepository { get; }
         public IWarehouseWriteRepository WarehouseWriteRepository {  get; }
 
+        public IProductReadRepository ProductReadRepository { get; }
+
+        public IProductWriteRepository ProductWriteRepository { get; }
+
         public UnitOfWork(ICategoryReadRepository categoryReadRepository, 
             ICategoryWriteRepository categoryWriteRepository,
             IWarehouseReadRepository warehouseReadRepository,
             IWarehouseWriteRepository warehouseWriteRepository,
-            ApplicationDbContext applicationDbContext)
+            IProductWriteRepository productWriteRepository,
+            IProductReadRepository productReadRepository,
+            ApplicationDbContext applicationDbContext
+            )
         {
             CategoryReadRepository = categoryReadRepository;
             CategoryWriteRepository = categoryWriteRepository;
             WarehouseReadRepository = warehouseReadRepository;
             WarehouseWriteRepository = warehouseWriteRepository;
+            ProductWriteRepository = productWriteRepository;    
+            ProductReadRepository = productReadRepository;
             _context = applicationDbContext;
         }
 

@@ -13,6 +13,8 @@ namespace StockSphere.Application.Abstractions.Services
         public ICategoryWriteRepository CategoryWriteRepository { get; }
         public IWarehouseReadRepository WarehouseReadRepository { get; }
         public IWarehouseWriteRepository WarehouseWriteRepository { get; }
+        public IProductReadRepository ProductReadRepository { get; }    
+        public IProductWriteRepository ProductWriteRepository { get; }
         Task<int> CommitAsync();
 
     }
