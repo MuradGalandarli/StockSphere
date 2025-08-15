@@ -10,5 +10,6 @@ namespace StockSphere.Application.Abstractions.Services
     public interface IProductService
     {
         public Task<bool> AddProduct(ProductDto product);
+        public List<ProductDto> GetAllProduct(int page,int size);
     }
 }

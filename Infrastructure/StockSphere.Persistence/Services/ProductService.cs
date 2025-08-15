@@ -1,5 +1,6 @@
 ﻿using StockSphere.Application.Abstractions.Services;
 using StockSphere.Application.Dtos;
+using StockSphere.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,19 @@ namespace StockSphere.Persistence.Services
             });
             await _unitOfWork.CommitAsync();
             return status;
+        }
+
+        public List<ProductDto> GetAllProduct(int page, int size)
+        {
+           var product = _unitOfWork.ProductReadRepository.GetAll().Skip((page-1)*size).Take(size);
+            return product.Select(p=> new ProductDto(){
+                Barcode = p.Barcode,
+                CategoryId = p.CategoryId,
+                Description = p.Description,
+                Name = p.Name,
+                SKU = p.SKU,
+                UnitOfMeasure = p.UnitOfMeasure,
+            }).ToList();
         }
     }
 }
