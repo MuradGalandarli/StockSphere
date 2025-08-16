@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockSphere.Application.Feature.Command.Product.GetAllProduct
+namespace StockSphere.Application.Feature.Query.Product.GetAllProduct
 {
     public class GetAllProductCommandHandler : IRequestHandler<GetAllProductCommandRequest, List<GetAllProductCommandResponse>>
     {

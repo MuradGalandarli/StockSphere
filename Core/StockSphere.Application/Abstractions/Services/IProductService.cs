@@ -11,5 +11,6 @@ namespace StockSphere.Application.Abstractions.Services
     {
         public Task<bool> AddProduct(ProductDto product);
         public List<ProductDto> GetAllProduct(int page,int size);
+        public Task<ProductDto> GetProduct(int productId);
     }
 }

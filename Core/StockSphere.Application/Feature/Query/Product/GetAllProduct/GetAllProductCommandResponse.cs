@@ -1,4 +1,4 @@
-﻿namespace StockSphere.Application.Feature.Command.Product.GetAllProduct
+﻿namespace StockSphere.Application.Feature.Query.Product.GetAllProduct
 {
     public class GetAllProductCommandResponse
     {

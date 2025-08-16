@@ -45,5 +45,23 @@ namespace StockSphere.Persistence.Services
                 UnitOfMeasure = p.UnitOfMeasure,
             }).ToList();
         }
+
+        public async Task<ProductDto> GetProduct(int productId)
+        {
+           Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(productId);
+           if(product == null)
+            {
+                return new();
+            }
+            return new()
+            {
+                Barcode = product.Barcode,
+                CategoryId = product.CategoryId,
+                Description = product.Description,
+                Name = product.Name,
+                SKU = product.SKU,
+                UnitOfMeasure = product.UnitOfMeasure,
+            };
+        }
     }
 }

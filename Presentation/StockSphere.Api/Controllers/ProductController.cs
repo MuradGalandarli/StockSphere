@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Product.AddProduct;
-using StockSphere.Application.Feature.Command.Product.GetAllProduct;
+using StockSphere.Application.Feature.Query.Product.GetAllProduct;
+using StockSphere.Application.Feature.Query.Product.GetProduct;
 using System.Runtime.CompilerServices;
 
 namespace StockSphere.Api.Controllers
@@ -30,6 +31,12 @@ namespace StockSphere.Api.Controllers
         {
             List<GetAllProductCommandResponse> getAllProductCommandResponse = await _mediat.Send(allProductCommandRequest);
             return Ok(getAllProductCommandResponse);
+        }
+        [HttpGet("get-product")]
+        public async Task<IActionResult> GetProduct([FromQuery]GetProductCommandRequest getProductCommandRequest)
+        {
+            GetProductCommandResponse getProductCommandResponse = await _mediat.Send(getProductCommandRequest);
+            return Ok(getProductCommandResponse);
         }
     }
 }
