@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Product.AddProduct;
+using StockSphere.Application.Feature.Command.Product.UpdateProduct;
 using StockSphere.Application.Feature.Query.Product.GetAllProduct;
 using StockSphere.Application.Feature.Query.Product.GetProduct;
 using System.Runtime.CompilerServices;
@@ -38,5 +39,13 @@ namespace StockSphere.Api.Controllers
             GetProductCommandResponse getProductCommandResponse = await _mediat.Send(getProductCommandRequest);
             return Ok(getProductCommandResponse);
         }
+        [HttpPut("update-product")]
+        public async Task<IActionResult> UpdateProduct([FromBody]UpdateProductCommandRequest updateProductCommandRequest)
+        {
+            UpdateProductCommandResponse updateProductCommandResponse = await _mediat.Send(updateProductCommandRequest);
+            return Ok(updateProductCommandResponse);
+        }
+
+
     }
 }

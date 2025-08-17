@@ -4,6 +4,7 @@ using StockSphere.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,6 +44,7 @@ namespace StockSphere.Persistence.Services
                 Name = p.Name,
                 SKU = p.SKU,
                 UnitOfMeasure = p.UnitOfMeasure,
+                Id = p.Id
             }).ToList();
         }
 
@@ -62,6 +64,21 @@ namespace StockSphere.Persistence.Services
                 SKU = product.SKU,
                 UnitOfMeasure = product.UnitOfMeasure,
             };
+        }
+
+        public async Task<bool> UpdateProduct(ProductDto product)
+        {
+            Product data =  await _unitOfWork.ProductReadRepository.GetByIdAsync(product.Id);
+           if(data == null)
+                return false;
+            data.UnitOfMeasure = product.UnitOfMeasure;
+            data.CategoryId = product.CategoryId;
+            data.Description = product.Description;
+            data.Name = product.Name;
+            data.SKU = product.SKU;
+            data.Barcode = product.Barcode;
+            await _unitOfWork.CommitAsync();
+            return true;
         }
     }
 }
