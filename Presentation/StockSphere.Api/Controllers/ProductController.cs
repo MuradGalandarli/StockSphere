@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Product.AddProduct;
+using StockSphere.Application.Feature.Command.Product.DeleteProduct;
 using StockSphere.Application.Feature.Command.Product.UpdateProduct;
 using StockSphere.Application.Feature.Query.Product.GetAllProduct;
 using StockSphere.Application.Feature.Query.Product.GetProduct;
@@ -44,6 +45,12 @@ namespace StockSphere.Api.Controllers
         {
             UpdateProductCommandResponse updateProductCommandResponse = await _mediat.Send(updateProductCommandRequest);
             return Ok(updateProductCommandResponse);
+        }
+        [HttpDelete("delete-product")]
+        public async Task<IActionResult> DeleteProduct([FromQuery]DeleteProductCommandRequest deleteProductCommandRequest)
+        {
+            DeleteProductCommandResponse deleteProductCommandResponse = await _mediat.Send(deleteProductCommandRequest);
+            return Ok(deleteProductCommandResponse);
         }
 
 

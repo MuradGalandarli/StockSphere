@@ -34,6 +34,16 @@ namespace StockSphere.Persistence.Services
             return status;
         }
 
+        public async Task<bool> DeleteProduct(int Id)
+        {
+           Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(Id);
+            if(product == null)
+          return false;
+            _unitOfWork.ProductWriteRepository.Delete(product);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+
         public List<ProductDto> GetAllProduct(int page, int size)
         {
            var product = _unitOfWork.ProductReadRepository.GetAll().Skip((page-1)*size).Take(size);
