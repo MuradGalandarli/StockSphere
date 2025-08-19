@@ -1,14 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using StockSphere.Application.Abstractions.Services;
 using StockSphere.Application.Repositories;
+using StockSphere.Application.Repositories.Stock;
 using StockSphere.Persistence.Context;
 using StockSphere.Persistence.Repositories;
+using StockSphere.Persistence.Repositories.Stock;
 using StockSphere.Persistence.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StockSphere.Persistence
 {
@@ -28,7 +25,9 @@ namespace StockSphere.Persistence
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+            services.AddScoped<IStockWriteRepository, StockWriteRepository>();
+            services.AddScoped<IStockReadRepository, StockReadRepository>();
+          
         }
     }
 }

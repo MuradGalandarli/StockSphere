@@ -7,6 +7,8 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace StockSphere.Persistence.Services
 {
@@ -21,24 +23,51 @@ namespace StockSphere.Persistence.Services
 
         public async Task<bool> AddProduct(ProductDto product)
         {
-          bool status = await _unitOfWork.ProductWriteRepository.AddAsync(new()
+            using var transaction = await _unitOfWork.BeginTransactionAsync();
+            try
             {
-                Barcode = product.Barcode,
-                CategoryId = product.CategoryId,
-                Description = product.Description,
-                Name = product.Name,
-                SKU = product.SKU,
-                UnitOfMeasure = product.UnitOfMeasure,
-            });
-            await _unitOfWork.CommitAsync();
-            return status;
+
+                Product newProduct = new Product
+                {
+                    Barcode = product.Barcode,
+                    CategoryId = product.CategoryId,
+                    Description = product.Description,
+                    Name = product.Name,
+                    SKU = product.SKU,
+                    UnitOfMeasure = product.UnitOfMeasure,
+                };
+
+
+                bool status = await _unitOfWork.ProductWriteRepository.AddAsync(newProduct);
+                await _unitOfWork.CommitAsync();
+                if (status)
+                {
+                    bool stockStatus = await _unitOfWork.StockWriteRepository.AddAsync(new()
+                    {
+                        ProductId = newProduct.Id,
+                        Quantity = product.Quantity,
+                        WarehouseId = product.WarehouseId,
+                    });
+                    await _unitOfWork.CommitAsync();
+                    await transaction.CommitAsync();
+
+                    return stockStatus;
+                }
+            }
+            catch
+            {
+
+                await _unitOfWork.RollbackAsync(transaction);
+
+            }
+            return false;
         }
 
         public async Task<bool> DeleteProduct(int Id)
         {
-           Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(Id);
-            if(product == null)
-          return false;
+            Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(Id);
+            if (product == null)
+                return false;
             _unitOfWork.ProductWriteRepository.Delete(product);
             await _unitOfWork.CommitAsync();
             return true;
@@ -46,8 +75,9 @@ namespace StockSphere.Persistence.Services
 
         public List<ProductDto> GetAllProduct(int page, int size)
         {
-           var product = _unitOfWork.ProductReadRepository.GetAll().Skip((page-1)*size).Take(size);
-            return product.Select(p=> new ProductDto(){
+            var product = _unitOfWork.ProductReadRepository.GetAll().Skip((page - 1) * size).Take(size);
+            return product.Select(p => new ProductDto()
+            {
                 Barcode = p.Barcode,
                 CategoryId = p.CategoryId,
                 Description = p.Description,
@@ -60,8 +90,8 @@ namespace StockSphere.Persistence.Services
 
         public async Task<ProductDto> GetProduct(int productId)
         {
-           Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(productId);
-           if(product == null)
+            Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(productId);
+            if (product == null)
             {
                 return new();
             }
@@ -78,8 +108,8 @@ namespace StockSphere.Persistence.Services
 
         public async Task<bool> UpdateProduct(ProductDto product)
         {
-            Product data =  await _unitOfWork.ProductReadRepository.GetByIdAsync(product.Id);
-           if(data == null)
+            Product data = await _unitOfWork.ProductReadRepository.GetByIdAsync(product.Id);
+            if (data == null)
                 return false;
             data.UnitOfMeasure = product.UnitOfMeasure;
             data.CategoryId = product.CategoryId;

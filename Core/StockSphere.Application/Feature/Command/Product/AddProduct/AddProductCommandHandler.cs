@@ -27,7 +27,9 @@ namespace StockSphere.Application.Feature.Command.Product.AddProduct
                 Name = request.Name,
                 SKU = request.SKU,
                 UnitOfMeasure = request.UnitOfMeasure,
-            });
+                WarehouseId = request.WarehouseId,
+                Quantity = request.Quantity
+          });
             return new() { Status = status };
         }
     }
