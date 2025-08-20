@@ -17,7 +17,7 @@ namespace StockSphere.Persistence.Services
         }
 
         public async Task<bool> AddCategory(CategoryDto category)
-        {
+            {
            bool status = await _unitOfWork.CategoryWriteRepository.AddAsync(new() { Description =category.Description, Name = category.Name});
            await _unitOfWork.CommitAsync();
             return status;

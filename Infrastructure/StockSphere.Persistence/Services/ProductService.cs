@@ -1,4 +1,5 @@
-﻿using StockSphere.Application.Abstractions.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using StockSphere.Application.Abstractions.Services;
 using StockSphere.Application.Dtos;
 using StockSphere.Domain.Entities;
 using System;
@@ -108,16 +109,36 @@ namespace StockSphere.Persistence.Services
 
         public async Task<bool> UpdateProduct(ProductDto product)
         {
-            Product data = await _unitOfWork.ProductReadRepository.GetByIdAsync(product.Id);
+            Product? data = await _unitOfWork.ProductReadRepository.GetWhere(x => x.Id == product.Id).Include(x => x.Stocks).FirstOrDefaultAsync();
+            
             if (data == null)
                 return false;
-            data.UnitOfMeasure = product.UnitOfMeasure;
-            data.CategoryId = product.CategoryId;
-            data.Description = product.Description;
-            data.Name = product.Name;
-            data.SKU = product.SKU;
-            data.Barcode = product.Barcode;
-            await _unitOfWork.CommitAsync();
+
+            using var transaction = await _unitOfWork.BeginTransactionAsync();
+
+            try
+            {
+                data.UnitOfMeasure = product.UnitOfMeasure;
+                data.CategoryId = product.CategoryId;
+                data.Description = product.Description;
+                data.Name = product.Name;
+                data.SKU = product.SKU;
+                data.Barcode = product.Barcode;
+
+                foreach(Stock stock in data.Stocks)
+                {
+                    stock.Quantity = product.Quantity;
+                    
+                }
+                await transaction.CommitAsync();
+                await _unitOfWork.CommitAsync();
+
+            }
+            catch
+            {
+                await _unitOfWork.RollbackAsync(transaction);
+            }
+
             return true;
         }
     }
