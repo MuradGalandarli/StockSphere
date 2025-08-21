@@ -76,7 +76,7 @@ namespace StockSphere.Persistence.Services
 
         public List<ProductDto> GetAllProduct(int page, int size)
         {
-            var product = _unitOfWork.ProductReadRepository.GetAll().Skip((page - 1) * size).Take(size);
+            var product = _unitOfWork.ProductReadRepository.GetAll().Include(x=>x.Stocks).Skip((page - 1) * size).Take(size);
             return product.Select(p => new ProductDto()
             {
                 Barcode = p.Barcode,
@@ -85,7 +85,8 @@ namespace StockSphere.Persistence.Services
                 Name = p.Name,
                 SKU = p.SKU,
                 UnitOfMeasure = p.UnitOfMeasure,
-                Id = p.Id
+                Id = p.Id,
+                Quantity =  Convert.ToInt32(p.Stocks.Where(x => x.ProductId == p.Id).Sum(x => x.Quantity))
             }).ToList();
         }
 

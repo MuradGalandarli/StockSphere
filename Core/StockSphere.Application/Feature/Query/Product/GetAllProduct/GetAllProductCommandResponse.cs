@@ -9,5 +9,6 @@
         public int? CategoryId { get; set; }
         public string? UnitOfMeasure { get; set; }
         public string? Description { get; set; }
+        public int Quantity { get; set; }
     }
 }

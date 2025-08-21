@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\query\\product\\getallproduct\\getallproductcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\query\\product\\getallproduct\\getallproductcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\query\\product\\getallproduct\\getallproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\query\\product\\getallproduct\\getallproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,14 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs",
-              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs",
-              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAawBMAAAAMAAAAAAAAAA==",
+              "Title": "GetAllProductCommandResponse.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandResponse.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandResponse.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:49:18.802Z",
+              "WhenOpened": "2025-08-20T19:26:23.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetAllProductCommandHandler.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandHandler.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandHandler.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Query\\Product\\GetAllProduct\\GetAllProductCommandHandler.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwCEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T19:26:01.165Z",
               "EditorCaption": ""
             },
             {
@@ -49,9 +66,9 @@
               "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\ProductService.cs",
               "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\ProductService.cs",
               "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\ProductService.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAuwIwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAEwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T11:49:11.888Z",
+              "WhenOpened": "2025-08-20T19:07:00.187Z",
               "EditorCaption": ""
             }
           ]

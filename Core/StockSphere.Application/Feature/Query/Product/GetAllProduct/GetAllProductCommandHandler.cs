@@ -31,6 +31,7 @@ namespace StockSphere.Application.Feature.Query.Product.GetAllProduct
                 SKU = p.SKU,
                 UnitOfMeasure = p.UnitOfMeasure,
                 Id = p.Id,
+                Quantity = p.Quantity,
             }).ToList();
         }
     }
