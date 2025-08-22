@@ -92,7 +92,7 @@ namespace StockSphere.Persistence.Services
 
         public async Task<ProductDto> GetProduct(int productId)
         {
-            Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(productId);
+            Product? product = await _unitOfWork.ProductReadRepository.GetWhere(x => x.Id == productId).Include(s => s.Stocks).FirstOrDefaultAsync();
             if (product == null)
             {
                 return new();
@@ -105,6 +105,7 @@ namespace StockSphere.Persistence.Services
                 Name = product.Name,
                 SKU = product.SKU,
                 UnitOfMeasure = product.UnitOfMeasure,
+                Quantity = Convert.ToInt32(product.Stocks.Sum(x => x.Quantity))
             };
         }
 
