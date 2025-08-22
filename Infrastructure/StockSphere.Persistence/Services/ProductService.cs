@@ -16,6 +16,7 @@ namespace StockSphere.Persistence.Services
     public class ProductService : IProductService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private object unitOfWork;
 
         public ProductService(IUnitOfWork unitOfWork)
         {
@@ -66,12 +67,23 @@ namespace StockSphere.Persistence.Services
 
         public async Task<bool> DeleteProduct(int Id)
         {
-            Product product = await _unitOfWork.ProductReadRepository.GetByIdAsync(Id);
+            var product = await _unitOfWork.ProductReadRepository.GetWhere(x => x.Id == Id).Include(x=>x.Stocks).FirstOrDefaultAsync();
             if (product == null)
                 return false;
-            _unitOfWork.ProductWriteRepository.Delete(product);
-            await _unitOfWork.CommitAsync();
-            return true;
+
+            using var transaction = await _unitOfWork.BeginTransactionAsync();
+            try
+            {
+                _unitOfWork.ProductWriteRepository.Delete(product);
+                _unitOfWork.StockWriteRepository.Delete(product.Stocks.Where(x => x.ProductId == product.Id).FirstOrDefault());
+                await _unitOfWork.CommitAsync();
+                await transaction.CommitAsync();
+                return true;
+            }
+            catch {
+                await _unitOfWork.RollbackAsync(transaction);
+            }
+            return false;
         }
 
         public List<ProductDto> GetAllProduct(int page, int size)
