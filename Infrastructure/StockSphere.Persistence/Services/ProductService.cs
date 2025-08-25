@@ -1,26 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using StockSphere.Application.Abstractions.Services;
 using StockSphere.Application.Dtos;
 using StockSphere.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace StockSphere.Persistence.Services
 {
     public class ProductService : IProductService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private object unitOfWork;
+        private readonly IMapper _mapper;
 
-        public ProductService(IUnitOfWork unitOfWork)
+        public ProductService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task<bool> AddProduct(ProductDto product)
@@ -28,18 +22,7 @@ namespace StockSphere.Persistence.Services
             using var transaction = await _unitOfWork.BeginTransactionAsync();
             try
             {
-
-                Product newProduct = new Product
-                {
-                    Barcode = product.Barcode,
-                    CategoryId = product.CategoryId,
-                    Description = product.Description,
-                    Name = product.Name,
-                    SKU = product.SKU,
-                    UnitOfMeasure = product.UnitOfMeasure,
-                };
-
-
+                Product newProduct = _mapper.Map<Product>(product);
                 bool status = await _unitOfWork.ProductWriteRepository.AddAsync(newProduct);
                 await _unitOfWork.CommitAsync();
                 if (status)
@@ -58,16 +41,14 @@ namespace StockSphere.Persistence.Services
             }
             catch
             {
-
                 await _unitOfWork.RollbackAsync(transaction);
-
             }
             return false;
         }
 
         public async Task<bool> DeleteProduct(int Id)
         {
-            var product = await _unitOfWork.ProductReadRepository.GetWhere(x => x.Id == Id).Include(x=>x.Stocks).FirstOrDefaultAsync();
+            var product = await _unitOfWork.ProductReadRepository.GetWhere(x => x.Id == Id).Include(x => x.Stocks).FirstOrDefaultAsync();
             if (product == null)
                 return false;
 
@@ -80,7 +61,8 @@ namespace StockSphere.Persistence.Services
                 await transaction.CommitAsync();
                 return true;
             }
-            catch {
+            catch
+            {
                 await _unitOfWork.RollbackAsync(transaction);
             }
             return false;
@@ -88,18 +70,9 @@ namespace StockSphere.Persistence.Services
 
         public List<ProductDto> GetAllProduct(int page, int size)
         {
-            var product = _unitOfWork.ProductReadRepository.GetAll().Include(x=>x.Stocks).Skip((page - 1) * size).Take(size);
-            return product.Select(p => new ProductDto()
-            {
-                Barcode = p.Barcode,
-                CategoryId = p.CategoryId,
-                Description = p.Description,
-                Name = p.Name,
-                SKU = p.SKU,
-                UnitOfMeasure = p.UnitOfMeasure,
-                Id = p.Id,
-                Quantity =  Convert.ToInt32(p.Stocks.Where(x => x.ProductId == p.Id).Sum(x => x.Quantity))
-            }).ToList();
+            var product = _unitOfWork.ProductReadRepository.GetAll().Include(x => x.Stocks).Skip((page - 1) * size).Take(size);
+
+            return _mapper.Map<List<ProductDto>>(product);
         }
 
         public async Task<ProductDto> GetProduct(int productId)
@@ -109,22 +82,14 @@ namespace StockSphere.Persistence.Services
             {
                 return new();
             }
-            return new()
-            {
-                Barcode = product.Barcode,
-                CategoryId = product.CategoryId,
-                Description = product.Description,
-                Name = product.Name,
-                SKU = product.SKU,
-                UnitOfMeasure = product.UnitOfMeasure,
-                Quantity = Convert.ToInt32(product.Stocks.Sum(x => x.Quantity))
-            };
+
+            return _mapper.Map<ProductDto>(product);
         }
 
         public async Task<bool> UpdateProduct(ProductDto product)
         {
             Product? data = await _unitOfWork.ProductReadRepository.GetWhere(x => x.Id == product.Id).Include(x => x.Stocks).FirstOrDefaultAsync();
-            
+
             if (data == null)
                 return false;
 
@@ -132,17 +97,11 @@ namespace StockSphere.Persistence.Services
 
             try
             {
-                data.UnitOfMeasure = product.UnitOfMeasure;
-                data.CategoryId = product.CategoryId;
-                data.Description = product.Description;
-                data.Name = product.Name;
-                data.SKU = product.SKU;
-                data.Barcode = product.Barcode;
-
-                foreach(Stock stock in data.Stocks)
+                _mapper.Map(product, data);
+                foreach (Stock stock in data.Stocks)
                 {
                     stock.Quantity = product.Quantity;
-                    
+
                 }
                 await transaction.CommitAsync();
                 await _unitOfWork.CommitAsync();
@@ -151,6 +110,7 @@ namespace StockSphere.Persistence.Services
             catch
             {
                 await _unitOfWork.RollbackAsync(transaction);
+                return false;
             }
 
             return true;

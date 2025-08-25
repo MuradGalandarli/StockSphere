@@ -9,7 +9,8 @@ namespace StockSphere.Application
         public static void StockSphereRegisterAdd(this IServiceCollection services)
         {
             services.AddMediatR(typeof(StockSphereRegister));
-           
+            services.AddAutoMapper(typeof(StockSphereRegister));
+
         }
     }
 }
