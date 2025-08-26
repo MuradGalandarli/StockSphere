@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\GitHub test\\StockSphere\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|d:\\github test\\stocksphere\\infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720436B9-2E29-4933-81DF-55A4FD07403C}|Infrastructure\\StockSphere.Persistence\\StockSphere.Persistence.csproj|solutionrelative:infrastructure\\stocksphere.persistence\\services\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\dtos\\profiles\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\dtos\\profiles\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\abstractions\\services\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\abstractions\\services\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\ProductService.cs",
-              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\ProductService.cs",
-              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\ProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Abstractions\\Services\\IUnitOfWork.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Abstractions\\Services\\IUnitOfWork.cs",
+              "RelativeToolTip": "Core\\StockSphere.Application\\Abstractions\\Services\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T08:56:12.691Z",
+              "WhenOpened": "2025-08-26T09:19:49.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductProfile.cs",
-              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Dtos\\Profiles\\ProductProfile.cs",
-              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Dtos\\Profiles\\ProductProfile.cs",
-              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Dtos\\Profiles\\ProductProfile.cs",
-              "RelativeToolTip": "Core\\StockSphere.Application\\Dtos\\Profiles\\ProductProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "WarehouseService.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "RelativeToolTip": "Infrastructure\\StockSphere.Persistence\\Services\\WarehouseService.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAUwE0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T08:14:52.54Z",
+              "WhenOpened": "2025-08-26T09:16:00.068Z",
               "EditorCaption": ""
             }
           ]
