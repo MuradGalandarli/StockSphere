@@ -19,6 +19,16 @@ namespace StockSphere.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()   
+                          .AllowAnyMethod()   
+                          .AllowAnyHeader();  
+                });
+            });
+
             builder.Services.InfrastructureRegistrationAdd(builder.Configuration);
             builder.Services.StockSphereRegisterAdd();
             builder.Services.StockSpherePersistenceRegistrationAdd();
@@ -66,6 +76,7 @@ namespace StockSphere.Api
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseCors("AllowAll");
 
             app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
             app.UseHttpsRedirection();
