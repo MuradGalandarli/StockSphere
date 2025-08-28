@@ -86,6 +86,35 @@ namespace StockSphere.Persistence.Services
             return _mapper.Map<ProductDto>(product);
         }
 
+        public async Task<List<ProductDto>> Search(SearchRequestDto searchRequestDto)
+        {
+            var query = _unitOfWork.ProductReadRepository.Table.Include(s => s.Stocks).AsQueryable();
+            if (searchRequestDto.WarehouseId > 0)
+            {
+                var productId = _unitOfWork.WarehouseReadRepository.GetWhere(w => w.Id == searchRequestDto.WarehouseId).Include(s => s.Stocks).SelectMany(x => x.Stocks.Select(i => i.ProductId));
+                if (productId.Any())
+                {
+                    query = query.Where(w => productId.Contains(w.Id));
+                }
+            }
+                if (searchRequestDto.ProductId > 0)
+                {
+                    query = query.Where(p => p.Id == searchRequestDto.ProductId);
+                }
+                if (searchRequestDto.CategoryId > 0)
+                {
+                    query = query.Where(c => c.CategoryId == searchRequestDto.CategoryId);
+                }
+                if (!string.IsNullOrEmpty(searchRequestDto.Name))
+                {
+                    query = query.Where(n => n.Name == searchRequestDto.Name);
+                }
+
+            
+            var datas = _mapper.Map<List<ProductDto>>(query);
+            return datas;
+        }
+
         public async Task<bool> UpdateProduct(ProductDto product)
         {
             Product? data = await _unitOfWork.ProductReadRepository.GetWhere(x => x.Id == product.Id).Include(x => x.Stocks).FirstOrDefaultAsync();

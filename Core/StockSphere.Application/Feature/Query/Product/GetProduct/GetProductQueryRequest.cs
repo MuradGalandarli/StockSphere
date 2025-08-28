@@ -2,7 +2,7 @@
 
 namespace StockSphere.Application.Feature.Query.Product.GetProduct
 {
-    public class GetProductCommandRequest:IRequest<GetProductCommandResponse>
+    public class GetProductQueryRequest:IRequest<GetProductQueryResponse>
     {
         public int Id { get; set; }
     }

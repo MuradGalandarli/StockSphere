@@ -10,19 +10,19 @@ using System.Threading.Tasks;
 
 namespace StockSphere.Application.Feature.Query.Product.GetAllProduct
 {
-    public class GetAllProductCommandHandler : IRequestHandler<GetAllProductCommandRequest, List<GetAllProductCommandResponse>>
+    public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, List<GetAllProductQueryResponse>>
     {
         private readonly IProductService _productService;
 
-        public GetAllProductCommandHandler(IProductService productService)
+        public GetAllProductQueryHandler(IProductService productService)
         {
             _productService = productService;
         }
 
-        public async Task<List<GetAllProductCommandResponse>> Handle(GetAllProductCommandRequest request, CancellationToken cancellationToken)
+        public async Task<List<GetAllProductQueryResponse>> Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken)
         {
             List<ProductDto> products = _productService.GetAllProduct(request.Page, request.Size);
-            return products.Select(p => new GetAllProductCommandResponse()
+            return products.Select(p => new GetAllProductQueryResponse()
             {
                 Barcode = p.Barcode,
                 CategoryId = p.CategoryId,

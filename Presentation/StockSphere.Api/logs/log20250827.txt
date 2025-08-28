@@ -1,0 +1,178 @@
+2025-08-27 13:20:08.118 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-27 13:20:08.150 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-27 13:21:24.355 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-27 13:21:24.360 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-27 13:29:26.403 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[@__searchRequestDto_ProductId_0='?' (DbType = Int32), @__searchRequestDto_Name_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0 AND p."Name" = @__searchRequestDto_Name_1
+ORDER BY p."Id"
+2025-08-27 13:29:26.459 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'StockSphere.Persistence.Context.ApplicationDbContext'.
+Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0
+ORDER BY p."Id"
+   at Npgsql.ThrowHelper.ThrowNpgsqlOperationInProgressException(NpgsqlCommand command)
+   at Npgsql.Internal.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|280_0(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.Internal.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0
+ORDER BY p."Id"
+   at Npgsql.ThrowHelper.ThrowNpgsqlOperationInProgressException(NpgsqlCommand command)
+   at Npgsql.Internal.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|280_0(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.Internal.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2025-08-27 13:29:26.548 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+EntityQueryable`1 -> List`1
+Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[StockSphere.Domain.Entities.Product, StockSphere.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[StockSphere.Application.Dtos.ProductDto, StockSphere.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0
+ORDER BY p."Id"
+   at Npgsql.ThrowHelper.ThrowNpgsqlOperationInProgressException(NpgsqlCommand command)
+   at Npgsql.Internal.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|280_0(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.Internal.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at lambda_method148(Closure, Object, List`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method148(Closure, Object, List`1, ResolutionContext)
+   at StockSphere.Persistence.Services.ProductService.Search(SearchRequestDto searchRequestDto) in D:\GitHub test\StockSphere\Infrastructure\StockSphere.Persistence\Services\ProductService.cs:line 114
+   at StockSphere.Application.Feature.Query.Product.SearchProduct.SearchQueryHandler.Handle(SearchQueryRequest request, CancellationToken cancellationToken) in D:\GitHub test\StockSphere\Core\StockSphere.Application\Feature\Query\Product\SearchProduct\SearchQueryHandler.cs:line 19
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at StockSphere.Api.Controllers.ProductController.Search(SearchQueryRequest searchQueryRequest) in D:\GitHub test\StockSphere\Presentation\StockSphere.Api\Controllers\ProductController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-27 13:29:26.595 +04:00 [ERR] Error mapping types.
+
+Mapping types:
+EntityQueryable`1 -> List`1
+Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[StockSphere.Domain.Entities.Product, StockSphere.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[StockSphere.Application.Dtos.ProductDto, StockSphere.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]-------------------------------------------
+2025-08-27 13:30:02.449 +04:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@__searchRequestDto_ProductId_0='?' (DbType = Int32), @__searchRequestDto_Name_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0 AND p."Name" = @__searchRequestDto_Name_1
+ORDER BY p."Id"
+2025-08-27 13:30:02.455 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'StockSphere.Persistence.Context.ApplicationDbContext'.
+Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+ORDER BY p."Id"
+   at Npgsql.ThrowHelper.ThrowNpgsqlOperationInProgressException(NpgsqlCommand command)
+   at Npgsql.Internal.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|280_0(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.Internal.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+ORDER BY p."Id"
+   at Npgsql.ThrowHelper.ThrowNpgsqlOperationInProgressException(NpgsqlCommand command)
+   at Npgsql.Internal.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|280_0(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.Internal.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2025-08-27 13:31:08.367 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[@__searchRequestDto_ProductId_0='?' (DbType = Int32), @__searchRequestDto_Name_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0 AND p."Name" = @__searchRequestDto_Name_1
+ORDER BY p."Id"
+2025-08-27 13:31:08.417 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'StockSphere.Persistence.Context.ApplicationDbContext'.
+Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0 AND p."Name" = @__searchRequestDto_Name_1
+ORDER BY p."Id"
+   at Npgsql.ThrowHelper.ThrowNpgsqlOperationInProgressException(NpgsqlCommand command)
+   at Npgsql.Internal.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|280_0(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.Internal.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: SELECT p."Id", p."Barcode", p."CategoryId", p."CreatedAt", p."Description", p."IsActive", p."Name", p."SKU", p."UnitOfMeasure", s."Id", s."ProductId", s."Quantity", s."WarehouseId"
+FROM "Products" AS p
+LEFT JOIN "Stocks" AS s ON p."Id" = s."ProductId"
+WHERE p."Id" = @__searchRequestDto_ProductId_0 AND p."Name" = @__searchRequestDto_Name_1
+ORDER BY p."Id"
+   at Npgsql.ThrowHelper.ThrowNpgsqlOperationInProgressException(NpgsqlCommand command)
+   at Npgsql.Internal.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|280_0(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.Internal.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()

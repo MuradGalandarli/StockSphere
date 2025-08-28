@@ -1,6 +1,6 @@
 ﻿namespace StockSphere.Application.Feature.Query.Product.GetAllProduct
 {
-    public class GetAllProductCommandResponse
+    public class GetAllProductQueryResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }

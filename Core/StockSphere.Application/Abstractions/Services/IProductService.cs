@@ -14,5 +14,6 @@ namespace StockSphere.Application.Abstractions.Services
         public Task<ProductDto> GetProduct(int productId);
         public Task<bool> UpdateProduct(ProductDto product);
         public Task<bool> DeleteProduct(int Id);
+        public Task<List<ProductDto>> Search(SearchRequestDto searchRequestDto);
     }
 }

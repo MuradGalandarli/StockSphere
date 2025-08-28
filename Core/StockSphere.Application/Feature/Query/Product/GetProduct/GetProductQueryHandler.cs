@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace StockSphere.Application.Feature.Query.Product.GetProduct
 {
-    public class GetProductCommandHandler : IRequestHandler<GetProductCommandRequest, GetProductCommandResponse>
+    public class GetProductQueryHandler : IRequestHandler<GetProductQueryRequest, GetProductQueryResponse>
     {
         private readonly IProductService _productService;
 
-        public GetProductCommandHandler(IProductService productService)
+        public GetProductQueryHandler(IProductService productService)
         {
             _productService = productService;
         }
 
-        public async Task<GetProductCommandResponse> Handle(GetProductCommandRequest request, CancellationToken cancellationToken)
+        public async Task<GetProductQueryResponse> Handle(GetProductQueryRequest request, CancellationToken cancellationToken)
         {
             var productDto = await _productService.GetProduct(request.Id);
             return new()

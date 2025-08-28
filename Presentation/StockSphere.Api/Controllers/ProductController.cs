@@ -6,6 +6,7 @@ using StockSphere.Application.Feature.Command.Product.DeleteProduct;
 using StockSphere.Application.Feature.Command.Product.UpdateProduct;
 using StockSphere.Application.Feature.Query.Product.GetAllProduct;
 using StockSphere.Application.Feature.Query.Product.GetProduct;
+using StockSphere.Application.Feature.Query.Product.SearchProduct;
 using System.Runtime.CompilerServices;
 
 namespace StockSphere.Api.Controllers
@@ -29,15 +30,15 @@ namespace StockSphere.Api.Controllers
         }
 
         [HttpGet("get-all-product")]
-        public async Task<IActionResult> GetAllProduct([FromQuery]GetAllProductCommandRequest allProductCommandRequest)
+        public async Task<IActionResult> GetAllProduct([FromQuery]GetAllProductQueryRequest allProductCommandRequest)
         {
-            List<GetAllProductCommandResponse> getAllProductCommandResponse = await _mediat.Send(allProductCommandRequest);
+            List<GetAllProductQueryResponse> getAllProductCommandResponse = await _mediat.Send(allProductCommandRequest);
             return Ok(getAllProductCommandResponse);
         }
         [HttpGet("get-product")]
-        public async Task<IActionResult> GetProduct([FromQuery]GetProductCommandRequest getProductCommandRequest)
+        public async Task<IActionResult> GetProduct([FromQuery]GetProductQueryRequest getProductCommandRequest)
         {
-            GetProductCommandResponse getProductCommandResponse = await _mediat.Send(getProductCommandRequest);
+            GetProductQueryResponse getProductCommandResponse = await _mediat.Send(getProductCommandRequest);
             return Ok(getProductCommandResponse);
         }
         [HttpPut("update-product")]
@@ -51,6 +52,12 @@ namespace StockSphere.Api.Controllers
         {
             DeleteProductCommandResponse deleteProductCommandResponse = await _mediat.Send(deleteProductCommandRequest);
             return Ok(deleteProductCommandResponse);
+        }
+        [HttpGet("search")]
+        public async Task<IActionResult> Search([FromQuery] SearchQueryRequest searchQueryRequest)
+        {
+            SearchQueryResponse searchQueryResponse = await _mediat.Send(searchQueryRequest);
+            return Ok(searchQueryResponse);
         }
 
 
