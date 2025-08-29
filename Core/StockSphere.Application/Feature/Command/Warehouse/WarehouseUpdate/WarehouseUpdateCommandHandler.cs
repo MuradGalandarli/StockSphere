@@ -1,31 +1,33 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using StockSphere.Application.Abstractions.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace StockSphere.Application.Feature.Command.Warehouse.WarehouseUpdate
 {
     public class WarehouseUpdateCommandHandler : IRequestHandler<WarehouseUpdateCommandRequest, WarehouseUpdateCommandResponse>
     {
         private readonly IWarehouseService _warehouseService;
+        private readonly IEnumerable<IValidator<WarehouseUpdateCommandRequest>> _validators;
 
-        public WarehouseUpdateCommandHandler(IWarehouseService warehouseService)
+        public WarehouseUpdateCommandHandler(IWarehouseService warehouseService, IEnumerable<IValidator<WarehouseUpdateCommandRequest>> validators)
         {
             _warehouseService = warehouseService;
+            _validators = validators;
         }
 
         public async Task<WarehouseUpdateCommandResponse> Handle(WarehouseUpdateCommandRequest request, CancellationToken cancellationToken)
         {
-            bool status = await _warehouseService.WarehouseUpdate(new()
+            bool status = false;
+            if (_validators.Any())
             {
-                Id = request.Id,
-                Name = request.Name,
-                Location = request.Location,
-            });
-
+                 status = await _warehouseService.WarehouseUpdate(new()
+                {
+                    Id = request.Id,
+                    Name = request.Name,
+                    Location = request.Location,
+                });
+            }
             return new()
             {
                 Status = status,

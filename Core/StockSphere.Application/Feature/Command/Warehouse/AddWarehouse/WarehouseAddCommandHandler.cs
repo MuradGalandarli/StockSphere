@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using StockSphere.Application.Abstractions.Services;
 using System;
 using System.Collections.Generic;
@@ -11,18 +12,26 @@ namespace StockSphere.Application.Feature.Command.Warehouse.AddWarehouse
     public class WarehouseAddCommandHandler : IRequestHandler<WarehouseAddCommandRequest, WarehouseAddCommandResponse>
     {
         private readonly IWarehouseService _warehouseService;
+        private readonly IEnumerable<IValidator<WarehouseAddCommandRequest>> _validator;
 
-        public WarehouseAddCommandHandler(IWarehouseService warehouseService)
+        public WarehouseAddCommandHandler(IWarehouseService warehouseService, IEnumerable<IValidator<WarehouseAddCommandRequest>> validator)
         {
             _warehouseService = warehouseService;
+            _validator = validator;
         }
 
         public async Task<WarehouseAddCommandResponse> Handle(WarehouseAddCommandRequest request, CancellationToken cancellationToken)
         {
-           bool status = await _warehouseService.AddWarehouse(request.Name, request.Location);
-            return new()
+            bool status = false;
+
+            if (_validator.Any())
             {
-                Status = status,
+                status = await _warehouseService.AddWarehouse(request.Name, request.Location);
+            }
+
+            return new WarehouseAddCommandResponse
+            {
+                Status = status
             };
         }
     }
