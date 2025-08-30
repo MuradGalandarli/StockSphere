@@ -58,7 +58,7 @@ namespace StockSphere.Api
                 };
             });
 
-
+           
 
             builder.Services.AddIdentityApiEndpoints<IdentityUser>(options =>
                 options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
@@ -81,9 +81,14 @@ namespace StockSphere.Api
             app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
             app.UseHttpsRedirection();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                db.Database.Migrate();
+            }
+
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

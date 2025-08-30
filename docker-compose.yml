@@ -1,0 +1,50 @@
+version: '3.9'
+
+networks:
+  app_net:
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Presentation/StockSphere.Api/Dockerfile
+    container_name: stock_api
+    ports:
+      - "5075:8080"   # host:container
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Host=db;Database=StockSphereDb;Username=postgres;Password=Murad3645
+    networks:
+      - app_net
+
+  db:
+    image: postgres:15
+    container_name: stock_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Murad3645
+      POSTGRES_DB: StockSphereDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app_net
+
+  nginx:
+    image: nginx:alpine
+    container_name: stock_nginx
+    ports:
+      - "9098:80"  # host:container
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+    networks:
+      - app_net
+
+volumes:
+  postgres_data:

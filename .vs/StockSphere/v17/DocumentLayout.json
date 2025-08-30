@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\GitHub test\\StockSphere\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|d:\\github test\\stocksphere\\core\\stocksphere.application\\feature\\command\\warehouse\\warehouseupdate\\warehouseupdatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A243C9EC-F668-4716-8E48-33C45D69A417}|Core\\StockSphere.Application\\StockSphere.Application.csproj|solutionrelative:core\\stocksphere.application\\feature\\command\\warehouse\\warehouseupdate\\warehouseupdatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|d:\\github test\\stocksphere\\presentation\\stocksphere.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|d:\\github test\\stocksphere\\presentation\\stocksphere.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|d:\\github test\\stocksphere\\presentation\\stocksphere.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|d:\\github test\\stocksphere\\presentation\\stocksphere.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{672B1FAD-565D-4485-8DA5-3C3D2C2189A9}|Presentation\\StockSphere.Api\\StockSphere.Api.csproj|solutionrelative:presentation\\stocksphere.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WarehouseUpdateCommandHandler.cs",
-              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\WarehouseUpdate\\WarehouseUpdateCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\WarehouseUpdate\\WarehouseUpdateCommandHandler.cs",
-              "ToolTip": "D:\\GitHub test\\StockSphere\\Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\WarehouseUpdate\\WarehouseUpdateCommandHandler.cs",
-              "RelativeToolTip": "Core\\StockSphere.Application\\Feature\\Command\\Warehouse\\WarehouseUpdate\\WarehouseUpdateCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T10:50:52.841Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Presentation\\StockSphere.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-29T09:22:29.487Z",
               "EditorCaption": ""
             },
             {
@@ -36,6 +48,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\appsettings.json",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\appsettings.json",
+              "RelativeToolTip": "Presentation\\StockSphere.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-29T08:42:31.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Program.cs",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Program.cs",
+              "RelativeToolTip": "Presentation\\StockSphere.Api\\Program.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwFYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T07:31:52.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "Presentation\\StockSphere.Api\\Dockerfile",
+              "ToolTip": "D:\\GitHub test\\StockSphere\\Presentation\\StockSphere.Api\\Dockerfile",
+              "RelativeToolTip": "Presentation\\StockSphere.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-29T06:59:25.791Z",
+              "EditorCaption": ""
             }
           ]
         }
