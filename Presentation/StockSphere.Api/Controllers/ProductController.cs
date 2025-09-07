@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockSphere.Application.Feature.Command.Product.AddProduct;
@@ -28,7 +29,7 @@ namespace StockSphere.Api.Controllers
             AddProductCommandResponce addProductCommandResponce = await _mediat.Send(addProductCommandRequest);
             return Ok(addProductCommandResponce);   
         }
-
+        //[Authorize]
         [HttpGet("get-all-product")]
         public async Task<IActionResult> GetAllProduct([FromQuery]GetAllProductQueryRequest allProductCommandRequest)
         {

@@ -1,10 +1,5 @@
 ﻿using AutoMapper;
 using StockSphere.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StockSphere.Application.Dtos.Profiles
 {
@@ -13,8 +8,11 @@ namespace StockSphere.Application.Dtos.Profiles
         public ProductProfile()
         {
             CreateMap<ProductDto, Product>();
-            CreateMap<Product, ProductDto>().ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.Stocks.Sum(s => s.Quantity)));
-        
+            CreateMap<Product, ProductDto>()
+    .ForMember(dest => dest.Quantity,
+               opt => opt.MapFrom(src => src.Stocks.Sum(s => s.Quantity)))
+    .ForMember(dest => dest.WarehouseName,
+               opt => opt.MapFrom(src => src.Stocks.Select(x => x.Warehouse.Name).FirstOrDefault()));
         }
     }
 }

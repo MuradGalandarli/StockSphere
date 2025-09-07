@@ -68,9 +68,9 @@ namespace StockSphere.Persistence.Services
             return false;
         }
 
-        public List<ProductDto> GetAllProduct(int page, int size)
+        public async Task<List<ProductDto>> GetAllProduct(int page, int size)
         {
-            var product = _unitOfWork.ProductReadRepository.GetAll().Include(x => x.Stocks).Skip((page - 1) * size).Take(size);
+            var product = await _unitOfWork.ProductReadRepository.GetAll().Include(x => x.Stocks).ThenInclude(w=>w.Warehouse).Skip((page - 1) * size).Take(size).ToListAsync();
 
             return _mapper.Map<List<ProductDto>>(product);
         }

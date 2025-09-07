@@ -18,6 +18,7 @@ namespace StockSphere.Application.Dtos
         public string? UnitOfMeasure { get; set; }
         public string? Description { get; set; }
         public int WarehouseId { get; set; }
+        public string WarehouseName { get; set; }
 
     }
 }

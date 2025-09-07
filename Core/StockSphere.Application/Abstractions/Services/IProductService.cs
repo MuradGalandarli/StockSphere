@@ -10,7 +10,7 @@ namespace StockSphere.Application.Abstractions.Services
     public interface IProductService
     {
         public Task<bool> AddProduct(ProductDto product);
-        public List<ProductDto> GetAllProduct(int page,int size);
+        public Task<List<ProductDto>> GetAllProduct(int page,int size);
         public Task<ProductDto> GetProduct(int productId);
         public Task<bool> UpdateProduct(ProductDto product);
         public Task<bool> DeleteProduct(int Id);
